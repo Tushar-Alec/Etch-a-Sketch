@@ -1,0 +1,60 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #181818;
+}
+#title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+ border: 10px solid white;
+  background: linear-gradient(45deg,purple, white , purple);
+  -webkit-background-clip: text;
+  color: transparent;
+  /* text-shadow: 4px 4px  white; */
+  
+  
+}
+#grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 530px; 
+  background-color: white;
+  border: 10px solid white;
+}
+
+.grid-item {
+  box-sizing: border-box;
+  width: calc(100% / 16);
+  height: 0;
+  padding-bottom: calc(100% / 16);
+  /* border: 1px solid rgb(156, 156, 156); */
+}
+
+#eraser-button,
+#eraser,
+#black-color-button,
+#random-color-button ,
+#new-grid-button {
+  height: 35px;
+  width: 80px;
+  align-items: center;
+  margin: 30px;
+  background-color: rgb(52, 49, 49);
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+#button-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  background-color: rgb(81, 75, 75);
+}
+.main {
+  margin-bottom: 30px;
+}
