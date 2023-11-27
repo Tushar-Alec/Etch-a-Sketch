@@ -29,11 +29,16 @@ body {
 
 .grid-item {
   box-sizing: border-box;
-  width: calc(100% / 16);
-  height: 0;
-  padding-bottom: calc(100% / 16);
-  /* border: 1px solid rgb(156, 156, 156); */
+      width: calc(100% / 16);
+      height: 0;
+      padding-bottom: calc(100% / 16);
+  /* border: 1px solid rgb(156, 156, 156);
+ */
 }
+
+
+
+
 
 #eraser-button,
 #eraser,
@@ -57,4 +62,40 @@ body {
 }
 .main {
   margin-bottom: 30px;
+}
+
+.slider {
+  -webkit-appearance: none;
+   appearance: none;
+   height: 25px;
+   width: 100%;
+   background: rgba(200, 225, 238, 0.726);
+   outline: none;
+   opacity: 0.7;
+   -webkit-transition: .2s;
+   transition: opacity .2s;
+}
+
+#slider-value {
+   margin: 0 auto;
+   text-align: center;
+}
+.slider:hover {
+   opacity: 1;
+}
+ 
+.slider::-webkit-slider-thumb {
+   -webkit-appearance: none;
+   appearance: none;
+   width: 25px;
+   height: 25px;
+   background: var(--accent-color);
+   cursor: pointer;
+}
+ 
+.slider::-moz-range-thumb {
+   width: 25px;
+   height: 25px;
+   background: var(--accent-color);
+   cursor: pointer;
 }
