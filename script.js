@@ -44,14 +44,16 @@ const gridContainer = document.getElementById("grid-container");
     });
   }
 
-  function createGrid() {
-    const squaresPerSide = parseInt(slider.value);
-    for (let i = 0; i < squaresPerSide * squaresPerSide; i++) {
+   function createGrid(col , rows) {
+     const squaresPerSide = parseInt(slider.value);
+    for (let i = 0; i < col * rows; i++) {
       const gridItem = document.createElement("div");
       gridItem.classList.add("grid-item");
       gridContainer.appendChild(gridItem);
-    }
-  }
+     }
+   }
+
+  
 
   function getRandomColor() {
     const letters = "0123456789ABCDEF";
@@ -66,4 +68,4 @@ const gridContainer = document.getElementById("grid-container");
     gridContainer.innerHTML = "";
   }
 
-  createGrid();
+  createGrid(16,16);
