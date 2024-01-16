@@ -4,7 +4,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: #181818;
+  background-color: royalblue;
 }
 #title {
   display: flex;
@@ -12,12 +12,10 @@ body {
   align-items: center;
   font-size: 50px;
  border: 10px solid white;
-  background: linear-gradient(45deg,purple, white , purple);
+  background: linear-gradient(red, red , red);
   -webkit-background-clip: text;
   color: transparent;
-  /* text-shadow: 4px 4px  white; */
-  
-  
+  text-shadow: 2px 2px  white;
 }
 #grid-container {
   display: flex;
