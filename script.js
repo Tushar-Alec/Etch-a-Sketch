@@ -1,12 +1,11 @@
-const gridContainer = document.getElementById("grid-container");
+function createGrid(rows, cols) {
+  const gridContainer = document.getElementById("grid-container");
   const eraserButton = document.getElementById("eraser-button");
   const randomColorButton = document.getElementById("random-color-button");
   const blackColorButton = document.getElementById("black-color-button");
-  const eraser = document.getElementById("eraser");
-  const slider = document.querySelector("#slider");
-  const sliderValue = document.querySelector("#slider-value");
+  const Eraser = document.getElementById("eraser");
 
-  sliderValue.textContent = `${slider.value} x ${slider.value} (Resolution)`;
+ 
 
   eraserButton.addEventListener("click", function () {
     // Set all grid items back to default color
@@ -16,9 +15,12 @@ const gridContainer = document.getElementById("grid-container");
     });
   });
 
-  eraser.addEventListener("click", function () {
+  Eraser.addEventListener("click", function () {
     setHoverEffect(() => "white");
   });
+
+
+
 
   randomColorButton.addEventListener("click", function () {
     setHoverEffect(getRandomColor);
@@ -27,12 +29,6 @@ const gridContainer = document.getElementById("grid-container");
   blackColorButton.addEventListener("click", function () {
     setHoverEffect(() => "black");
   });
-
-  slider.oninput = function() {
-    clearGrid();
-    createGrid();
-    sliderValue.textContent = `${this.value} x ${this.value} (Resolution)`;
-  };
 
   function setHoverEffect(colorGetter) {
     const gridItems = document.querySelectorAll(".grid-item");
@@ -44,28 +40,45 @@ const gridContainer = document.getElementById("grid-container");
     });
   }
 
-   function createGrid(col , rows) {
-     const squaresPerSide = parseInt(slider.value);
-    for (let i = 0; i < col * rows; i++) {
-      const gridItem = document.createElement("div");
-      gridItem.classList.add("grid-item");
-      gridContainer.appendChild(gridItem);
-     }
+  for (let i = 0; i < rows * cols; i++) {
+    const gridItem = document.createElement("div");
+    gridItem.classList.add("grid-item");
+
+//     // Add hover effect
+//      gridItem.addEventListener("mouseover", function () {
+//     //   // Change the background color to a random color on hover
+//       const randomColor = getRandomColor();
+//       gridItem.style.backgroundColor = randomColor;
+//      });
+
+//     //Reset the color when the mouse leaves the grid item
+//      gridItem.addEventListener('mouseout', function () {
+//          gridItem.style.backgroundColor = '';
+//     });
+
+ 
+
+gridContainer.appendChild(gridItem);
    }
+ }
 
-  
-
-  function getRandomColor() {
-    const letters = "0123456789ABCDEF";
-    let color = "#";
-    for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
+// Function to generate a random color in hexadecimal format
+function getRandomColor() {
+  const letters = "0123456789ABCDEF";
+  let color = "#";
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
   }
+  return color;
+}
 
-  function clearGrid() {
-    gridContainer.innerHTML = "";
-  }
+function clearGrid() {
+  const gridItems = document.querySelectorAll(".grid-item");
+  gridItems.forEach(function (item) {
+      item.style.backgroundColor = "";
+  });
+}
 
-  createGrid(16,16);
+
+
+createGrid(16, 16);
