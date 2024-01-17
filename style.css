@@ -15,8 +15,8 @@ body {
 }
 #title {
   margin: 20px;
-  font-size: 90px;
-  width: 825px;
+  font-size: 60px;
+  width: 600px;
   height: 120px;
   margin-top: 80px;
   display: flex;
@@ -35,7 +35,7 @@ body {
   height: 600px;
   width: 600px;
   background-color: white;
-  border: 15px solid black;
+  border: 10px solid white;
 }
 .grid-cell {
   display: flex;
@@ -48,14 +48,21 @@ body {
 #black-color-button,
 #random-color-button,
 #new-grid-button {
-  height: 80px;
-  width: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  font-weight: bold;
+  padding: 10px;
+  margin: 10px;
+  height: 60px;
+  width: 150px;
   margin: 30px;
   background-color: rgb(52, 49, 49);
   border: none;
   color: white;
   cursor: pointer;
+  border-radius: 10px;
 }
 /* #button-container {
   display: flex;
@@ -71,14 +78,15 @@ body {
   margin-bottom: 30px;
   display: flex;
 }
-.left-btns,
-.right-btns {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 629px;
-  width: 110px;
-  background-color: black;
-}
 
+#size-div {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(52, 49, 49);
+  
+}
+.random-color-button {
+  background-color: blue;
+}

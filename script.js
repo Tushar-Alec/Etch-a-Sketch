@@ -5,6 +5,8 @@ const blackColorButton = document.getElementById("black-color-button");
 const eraser = document.getElementById("eraser");
 const sizeInput = document.getElementById("size");
 
+
+//make a grid using user input
 function changeSize() {
   container.innerHTML = "";
 
@@ -47,7 +49,6 @@ function CreateGrid(rows, columns) {
   container.style.setProperty("--grid-rows", rows);
   container.style.setProperty("--grid-columns", columns);
 
-  //make a grid using user input
   for (let i = 0; i < rows * columns; i++) {
     const cell = document.createElement("div");
     container.appendChild(cell).className = "grid-cell";
@@ -71,3 +72,5 @@ function clearGrid() {
     item.style.backgroundColor = "";
   });
 }
+
+
