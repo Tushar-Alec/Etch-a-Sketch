@@ -1,45 +1,55 @@
+:root {
+  --grid-rows: 1;
+  --grid-columns: 1;
+}
+
 body {
   display: flex;
+  flex-direction: column; /* Change from row to column */
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
   background-color: royalblue;
 }
 #title {
+  margin: 20px;
+  font-size: 90px;
+  width: 825px;
+  height: 120px;
+  margin-top: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 50px;
- border: 10px solid white;
-  background: linear-gradient(red, red , red);
+  border: 10px solid white;
+  background: linear-gradient(red ,red , red);
   -webkit-background-clip: text;
   color: transparent;
-  text-shadow: 2px 2px  white;
+  text-shadow: 3px 3px white;
 }
 #grid-container {
-  display: flex;
-  flex-wrap: wrap;
-  width: 530px; 
+  display: grid;
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+  height: 600px;
+  width: 600px;
   background-color: white;
-  border: 10px solid white;
+  border: 15px solid black;
 }
-
-.grid-item {
-  box-sizing: border-box;
-  width: calc(100% / 16);
-  height: 0;
-  padding-bottom: calc(100% / 16);
-  /* border: 1px solid rgb(156, 156, 156); */
+.grid-cell {
+  display: flex;
+  border: 1px solid rgba(78, 78, 78, 0.158);
+  background-color: white;
 }
 
 #eraser-button,
 #eraser,
 #black-color-button,
-#random-color-button ,
+#random-color-button,
 #new-grid-button {
-  height: 35px;
-  width: 80px;
+  height: 80px;
+  width: 30px;
   align-items: center;
   margin: 30px;
   background-color: rgb(52, 49, 49);
@@ -47,12 +57,28 @@ body {
   color: white;
   cursor: pointer;
 }
-#button-container {
+/* #button-container {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
-  margin-top: 80px;
+  height: 620px;
+  width: 170px;
   background-color: rgb(81, 75, 75);
-}
+  border-radius: 0px 10px 10px 0px;
+} */
 .main {
   margin-bottom: 30px;
+  display: flex;
 }
+.left-btns,
+.right-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 629px;
+  width: 110px;
+  background-color: black;
+}
+
