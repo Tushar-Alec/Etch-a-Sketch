@@ -7,18 +7,39 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="main">
     <h1 id="title">Etch-A-Sketch</h1>
+<div class="main">
+    <div class="left-btns">
+    <button id="eraser-button">Clear</button>
+    <button id="random-color-button">Random Color</button>
+</div>
     <div id="grid-container"></div>
-</div>
-
-
-<div id="button-container">
-<button id="eraser-button">Clear</button>
-
-<button id="random-color-button">Random Color</button>
+    <div class="right-btns">
     <button id="black-color-button">Black Color</button>
-<button id="eraser">Eraser</button>
+        <button id="eraser">Eraser</button>
+        <div id="size-div">
+                                
+            <input type="range" id="size" name="size" min="2" max="50" value="16" oninput="changeSize()">
+        
+        </div>
+    </div>
+        
+        
+    <!-- <div id="button-container">
+        <button id="eraser-button">Clear</button>
+        
+        <button id="random-color-button">Random Color</button>
+            <button id="black-color-button">Black Color</button>
+        <button id="eraser">Eraser</button>
+        <div id="size-div">
+                                
+            <input type="range" id="size" name="size" min="2" max="100" value="16" oninput="changeSize()">
+        
+        </div>
+        </div> -->
 </div>
+<footer>The Odin Project</footer>
+
+
 </body>
 </html>
