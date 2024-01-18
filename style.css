@@ -84,11 +84,21 @@ body {
 #size-div {
   padding: 10px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   background-color: white;
   border-radius: 10px;
   height: 40px;
+  width: 160px;
   margin: 30px;
   border: 1px solid white;
+}
+#text-container {
+ 
+}
+#size {
+  width: 90%;
+}
+#size-text {
+  color: rgb(7, 154, 154) ;
 }

@@ -4,6 +4,8 @@ const randomColorButton = document.getElementById("random-color-button");
 const blackColorButton = document.getElementById("black-color-button");
 const eraser = document.getElementById("eraser");
 const sizeInput = document.getElementById("size");
+const sizeText = document.getElementById('size-text');
+const textContainer = document.getElementById('text-container');
 
 
 //make a grid using user input
@@ -11,6 +13,7 @@ function changeSize() {
   container.innerHTML = "";
 
   let size = parseInt(sizeInput.value);
+  sizeText.textContent = `${size}*${size}`;
 
   CreateGrid(size, size);
 }
