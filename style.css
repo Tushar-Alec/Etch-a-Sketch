@@ -77,7 +77,6 @@ body {
   width: 170px;
 }
 .main {
-  margin-bottom: 30px;
   display: flex;
 }
 
@@ -99,4 +98,11 @@ body {
 }
 #size-text {
   color: rgb(7, 154, 154) ;
+}
+
+#footer {
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
 }
