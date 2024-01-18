@@ -11,22 +11,23 @@ body {
   height: 100%;
   width: 100%;
   scroll-behavior: smooth;
-  background-color: royalblue;
+  background-color: rgb(7, 154, 154);
 }
 #title {
   margin: 20px;
   font-size: 60px;
   width: 600px;
   height: 120px;
-  margin-top: 80px;
+  margin-top: 130px;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 10px solid white;
-  background: linear-gradient(red ,red , red);
+  border-radius: 10px;
+  background: linear-gradient(white,white,white);
   -webkit-background-clip: text;
   color: transparent;
-  text-shadow: 3px 3px white;
+  text-shadow: 2px 2px white;
 }
 #grid-container {
   display: grid;
@@ -36,6 +37,10 @@ body {
   width: 600px;
   background-color: white;
   border: 10px solid white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+  margin-right: 213px;
+  justify-content: center;
 }
 .grid-cell {
   display: flex;
@@ -46,34 +51,31 @@ body {
 #eraser-button,
 #eraser,
 #black-color-button,
-#random-color-button,
-#new-grid-button {
+#random-color-button {
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
+  font-size: 22px;
   padding: 10px;
-  margin: 10px;
-  height: 60px;
-  width: 150px;
   margin: 30px;
-  background-color: rgb(52, 49, 49);
+  height: 62px;
+  width: 182px;
+  background-color: white;
   border: none;
-  color: white;
+  color: rgb(7, 154, 154);
   cursor: pointer;
   border-radius: 10px;
 }
-/* #button-container {
+#button-container {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
+  margin: 22px;
   height: 620px;
   width: 170px;
-  background-color: rgb(81, 75, 75);
-  border-radius: 0px 10px 10px 0px;
-} */
+}
 .main {
   margin-bottom: 30px;
   display: flex;
@@ -84,9 +86,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(52, 49, 49);
-  
-}
-.random-color-button {
-  background-color: blue;
+  background-color: white;
+  border-radius: 10px;
+  height: 40px;
+  margin: 30px;
+  border: 1px solid white;
 }
